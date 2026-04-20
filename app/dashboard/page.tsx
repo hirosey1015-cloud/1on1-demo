@@ -382,7 +382,7 @@ export default function DashboardPage() {
                 <XAxis dataKey="month" tick={{ fontSize: 11, fill: '#9CA3AF' }} />
                 <YAxis domain={[50, 80]} tick={{ fontSize: 11, fill: '#9CA3AF' }} />
                 <Tooltip
-                  formatter={(v: number) => [`${v}点`, 'スコア']}
+                  formatter={(v: number | undefined) => [`${v ?? ''}点`, 'スコア']}
                   contentStyle={{ borderRadius: '8px', border: '1px solid #E5E7EB', fontSize: '12px' }}
                 />
                 <ReferenceLine y={75} stroke="#EF4444" strokeDasharray="4 4"
