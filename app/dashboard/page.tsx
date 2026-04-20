@@ -382,7 +382,7 @@ export default function DashboardPage() {
                 <XAxis dataKey="month" tick={{ fontSize: 11, fill: '#9CA3AF' }} />
                 <YAxis domain={[50, 80]} tick={{ fontSize: 11, fill: '#9CA3AF' }} />
                 <Tooltip
-                  formatter={(v: number | undefined) => [`${v ?? ''}点`, 'スコア']}
+                  formatter={(v) => [`${v}点`, 'スコア']}
                   contentStyle={{ borderRadius: '8px', border: '1px solid #E5E7EB', fontSize: '12px' }}
                 />
                 <ReferenceLine y={75} stroke="#EF4444" strokeDasharray="4 4"
@@ -403,7 +403,7 @@ export default function DashboardPage() {
                 <XAxis dataKey="month" tick={{ fontSize: 11, fill: '#9CA3AF' }} />
                 <YAxis domain={[48, 82]} tick={{ fontSize: 11, fill: '#9CA3AF' }} />
                 <Tooltip contentStyle={{ borderRadius: '8px', border: '1px solid #E5E7EB', fontSize: '11px' }}
-                  formatter={(v: number, name: string) => [`${v}点`, name]} />
+                  formatter={(v, name) => [`${v}点`, name]} />
                 <Legend wrapperStyle={{ fontSize: '11px', paddingTop: '8px' }} />
                 <Line type="monotone" dataKey="営業部"     stroke="#4F46E5" strokeWidth={2} dot={false} />
                 <Line type="monotone" dataKey="マーケ"     stroke="#10B981" strokeWidth={2} dot={false} />
@@ -567,7 +567,7 @@ export default function DashboardPage() {
                 <XAxis dataKey="dept" tick={{ fontSize: 10, fill: '#9CA3AF' }} />
                 <YAxis domain={[0, 110]} unit="%" tick={{ fontSize: 10, fill: '#9CA3AF' }} />
                 <Tooltip
-                  formatter={(v: number, name: string) => [`${v}%`, name]}
+                  formatter={(v, name) => [`${v}%`, name]}
                   contentStyle={{ borderRadius: '8px', border: '1px solid #E5E7EB', fontSize: '11px' }}
                 />
                 <Legend wrapperStyle={{ fontSize: '11px' }} />
@@ -591,7 +591,7 @@ export default function DashboardPage() {
               <YAxis yAxisId="right" orientation="right" domain={[58, 82]} tick={{ fontSize: 11, fill: '#10B981' }}
                 label={{ value: '生産性', angle: 90, position: 'insideRight', fontSize: 10, fill: '#10B981' }} />
               <Tooltip
-                formatter={(v: number, name: string) => [`${v}点`, name]}
+                formatter={(v, name) => [`${v}点`, name]}
                 contentStyle={{ borderRadius: '8px', border: '1px solid #E5E7EB', fontSize: '11px' }}
               />
               <Legend wrapperStyle={{ fontSize: '12px' }} />
